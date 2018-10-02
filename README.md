@@ -33,3 +33,9 @@ Java 7 无政策限制文件：[java官方下载](http://www.oracle.com/technetw
     
     windows的系统可能需要如下操作：
     切换到%JDK_Home%\jre\lib\security目录下，对应覆盖local_policy.jar和US_export_policy.jar两个文件。同时，你可能有必要在%JRE_Home%\lib\security目录下，也需要对应覆盖这两个文件。
+ 
+#### jBCrypt
+
+[jBCrypt网站](https://www.mindrot.org/projects/jBCrypt/)
+
+[已下载源码](https://github.com/itning/java_security/blob/master/libs/jBCrypt-0.4.zip)
