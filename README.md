@@ -39,3 +39,27 @@ Java 7 无政策限制文件：[java官方下载](http://www.oracle.com/technetw
 [jBCrypt网站](https://www.mindrot.org/projects/jBCrypt/)
 
 [已下载源码](https://github.com/itning/java_security/blob/master/libs/jBCrypt-0.4.zip)
+
+RSA私钥A加密请求
+私钥A如何获取？
+
+RSA签名
+RSA加密
+
+
+服务器使用私钥B发送加密后的用于签名的随机私钥A（随机公钥A在服务器存储）
+JS用公钥B解密获取私钥A（私钥A随后存储在sessionStorage）。
+使用私钥A签名数据发送给服务器
+服务器使用公钥A验证数据正确性
+
+公钥B怎么来？
+放在前端，每隔一段时间更换
+
+服务器存储：
+用于验签的随机公钥A---存储在用户表中
+用于加密的私钥B----存储在配置文件中
+前端存储：
+用于签名的私钥A----存储在sessionStorage
+用于解密的公钥B----硬编码，隔一段时间更换
+
+数据中包含时间戳 10秒后过期。
